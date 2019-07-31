@@ -1,0 +1,60 @@
+button {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 3px;
+}
+.is-green{
+    background: green;
+}
+.is-grey{
+    background: grey;
+}
+.button_2{
+    width: 100px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    float: left;
+}
+.button_3{
+    width: 100px;
+    height: 50px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    float: right;
+}
+.tiket{
+    width: 220px;
+    height: 180px; 
+    border: 2px solid black;
+    float: left;
+    clear: left;
+    margin: 20px;
+    padding: 20px;
+}
+.sekcija_1{
+    width: 220px;
+    height: 180px; 
+    border: 2px solid black;
+    float: right;
+    margin-top: 20px; 
+    margin-right: 20px;
+    padding: 20px;
+}
+.sekcija_3{
+    margin: 20px;
+    width: 220px;
+    height: 80px; 
+    border: 2px solid black;
+    float: left;
+    padding: 20px;
+}
+.app{
+    width: 600px;
+    height: 450px;
+    border: 2px solid black;
+    margin: 30px;
+    padding: 50px;
+}
