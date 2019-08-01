@@ -109,6 +109,7 @@ var vm = new Vue({
       generateCombination: function () {
         this.getRandomNumbers(0);
       },
+
       getRandomNumbers(counter){
         if(counter < 12){
           setTimeout(function(){
@@ -123,13 +124,13 @@ var vm = new Vue({
           }.bind(this), 2000);
         }
         this.winingNumbers.sort(function(a, b){return a-b});
-        this.markWiningTickets();        
+        this.markWiningTickets();     
       },
      
      markWiningTickets() {
       function isWiningTicket(currentValue) {
         return this.winingNumbers.indexOf(parseInt(currentValue.value, 10)) > -1
-      }
+     }
 
       var that = this;
       this.allTickets.forEach(function(obj) {     
@@ -137,9 +138,13 @@ var vm = new Vue({
         var isWining = arr1.every(isWiningTicket, that);
         obj.isWining = isWining;   
       }); 
-     },
     },
 
+    resetGame() {
+       this.winingNumbers = [];
+       this.allTickets = [];
+    }
+   },
     template: `<div class="app">
     <div class="sekcija_3">
       <button
@@ -154,7 +159,10 @@ var vm = new Vue({
     <button class="button_3"
         v-if="this.allTickets.length == 5"
         @click="generateCombination"
-      >ODIGRAJ
-    </button>
+      >ODIGRAJ</button>
+      <button class="button_3"
+        v-if="this.winingNumbers.length == 12"
+        @click="resetGame"
+      >RESET</button>
     </div>`
-});
+  });
